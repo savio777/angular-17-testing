@@ -3,11 +3,17 @@ import { NgOptimizedImage } from '@angular/common';
 
 import { HeaderComponent } from '../header/header.component';
 import { BtnCustomComponent } from '../btn-custom/btn-custom.component';
+import { NewsletterFormComponent } from '../newsletter-form/newsletter-form.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, NgOptimizedImage, BtnCustomComponent],
+  imports: [
+    HeaderComponent,
+    NgOptimizedImage,
+    BtnCustomComponent,
+    NewsletterFormComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
