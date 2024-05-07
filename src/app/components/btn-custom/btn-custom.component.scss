@@ -1,0 +1,31 @@
+@import "../../../colors.scss";
+
+.btn {
+  border: none;
+  cursor: pointer;
+
+  border-radius: 30px;
+  padding: 20px 40px;
+
+  font-weight: 700;
+
+  &:disabled {
+    opacity: 0.6;
+  }
+
+  &.primary {
+    color: white;
+    font-size: 24px;
+    background: -webkit-linear-gradient(
+      180deg,
+      $primary-color,
+      $secondary-color
+    );
+  }
+
+  &.secondary {
+    background: white;
+    font-size: 16px;
+    color: $primary-text;
+  }
+}

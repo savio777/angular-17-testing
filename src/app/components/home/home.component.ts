@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
 import { HeaderComponent } from '../header/header.component';
+import { BtnCustomComponent } from '../btn-custom/btn-custom.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, NgOptimizedImage],
+  imports: [HeaderComponent, NgOptimizedImage, BtnCustomComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
