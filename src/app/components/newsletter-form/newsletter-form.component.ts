@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -19,7 +19,7 @@ import { NewsletterService } from '../../services/newsletter.service';
 })
 export class NewsletterFormComponent {
   form: FormGroup;
-  isLoading: boolean = false;
+  isLoading = signal(false);
 
   constructor(private service: NewsletterService) {
     this.form = new FormGroup({
@@ -30,7 +30,7 @@ export class NewsletterFormComponent {
 
   handleSubmit() {
     if (this.form.valid) {
-      this.isLoading = true;
+      this.isLoading.set(true);
 
       this.service
         .sendData(this.form.value.name, this.form.value.email)
@@ -46,7 +46,7 @@ export class NewsletterFormComponent {
             alert(res.message);
           },
           complete: () => {
-            this.isLoading = false;
+            this.isLoading.set(false);
           },
         });
     }

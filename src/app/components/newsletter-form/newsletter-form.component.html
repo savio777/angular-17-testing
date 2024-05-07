@@ -24,7 +24,7 @@
       variant="secondary"
       btn-text="se inscreva"
       [disabled]="!form.valid"
-      [loading]="isLoading"
+      [loading]="isLoading()"
       (submit)="handleSubmit()"
     >
     </app-btn-custom>
