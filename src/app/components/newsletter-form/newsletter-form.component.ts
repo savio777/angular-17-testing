@@ -19,7 +19,7 @@ import { NewsletterService } from '../../services/newsletter.service';
 })
 export class NewsletterFormComponent {
   form: FormGroup;
-  isLoading = signal(false);
+  isLoading = signal(false); // melhorias na renderização do html ao mudar valor
 
   constructor(private service: NewsletterService) {
     this.form = new FormGroup({
